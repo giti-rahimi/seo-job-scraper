@@ -73,7 +73,12 @@ BLACKLIST_KEYWORDS = [
 "volunteer",
 "commission only",
 ]
-
+EUROPEAN_COUNTRIES_CODES = [
+    "AL", "AD", "AT", "BE", "BA", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", 
+    "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", 
+    "MD", "MC", "ME", "NL", "MK", "NO", "PL", "PT", "RO", "SM", "RS", "SK", 
+    "SI", "ES", "SE", "CH", "UA", "GB", "UK","AM","TR"
+]
 # ══════════════════════════════════════════════════════════════════════════════
 # حافظه دائمی — seen_jobs.txt
 # ══════════════════════════════════════════════════════════════════════════════
@@ -339,6 +344,15 @@ def main():
                     if job_id in seen_jobs:
                         already_seen += 1
                         continue
+                    # ─── شروع فیلتر کشورهای اروپایی ───
+                    # دریافت کد کشور و تبدیل به حروف بزرگ برای تطبیق دقیق
+                    job_country = (job.get("job_country") or "").upper()
+                    
+                    # اگر کشور در لیست اروپا نبود، نادیده بگیر (continue کن)
+                    if job_country not in EUROPEAN_COUNTRIES_CODES:
+                        # ما این‌ها را به عنوان "تکراری یا فیلتر شده" حساب نمی‌کنیم 
+                        # چون اصلاً در محدوده جغرافیایی ما نیستند
+                        continue 
 
                     seen_jobs.add(job_id)   # همیشه ثبت میکنیم، حتی blacklisted ها
 
