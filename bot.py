@@ -9,7 +9,7 @@ from pathlib import Path
 
 # ─── Optional: Google Sheets ──────────────────────────────────────────────────
 try:
-    import gspread
+    import gspread 
     from google.oauth2.service_account import Credentials
     SHEETS_AVAILABLE = True
 except ImportError:
@@ -73,11 +73,9 @@ BLACKLIST_KEYWORDS = [
 "volunteer",
 "commission only",
 ]
+
 EUROPEAN_COUNTRIES_CODES = [
-    "AL", "AD", "AT", "BE", "BA", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", 
-    "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", 
-    "MD", "MC", "ME", "NL", "MK", "NO", "PL", "PT", "RO", "SM", "RS", "SK", 
-    "SI", "ES", "SE", "CH", "UA", "GB", "UK","AM","TR"
+    "DE","UK","NL","SE","NO","DK","FI","PL","AT","BE","FR","ES","IE","CH","TR","AM",
 ]
 # ══════════════════════════════════════════════════════════════════════════════
 # حافظه دائمی — seen_jobs.txt
