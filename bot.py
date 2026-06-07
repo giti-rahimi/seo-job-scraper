@@ -40,23 +40,11 @@ SEARCH_QUERIES = [
     "QA Automation Engineer",
     "SDET",
 "QA Engineer",
-"Software Tester in Test",
-"Quality Assurance Analyst",
+"Software Tester" ,
+"Quality Assurance Engineer",
 "Automation Test Engineer",
-"QA Lead",
-"Test Lead",
-"Senior QA Engineer",
-"QA Architect",
-"QA Manager",
-"Principal QA Engineer",
-"Backend QA Engineer",
-"API Test Engineer",
-"FinTech QA Specialist",
 "Performance Test Engineer",
-"ETL Tester",
-"Quality Engineer",
-"Release Engineer",
-"UAT Lead",
+    "Manual Tester"
 ]
 
 # ─── کلمات ممنوعه (Blacklist) ──────────────────────────────────────────────────
