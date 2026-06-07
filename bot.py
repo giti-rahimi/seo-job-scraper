@@ -330,7 +330,7 @@ def main():
     already_seen  = 0
     errors        = 0
     for country in EUROPEAN_COUNTRIES_CODES:
-    for query in SEARCH_QUERIES:
+      for query in SEARCH_QUERIES:
         log.info(f"Searching: '{query}'")
         try:
             jobs = search_jobs(query, country)
