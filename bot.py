@@ -344,16 +344,7 @@ def main():
                     if job_id in seen_jobs:
                         already_seen += 1
                         continue
-                    # ─── شروع فیلتر کشورهای اروپایی ───
-                    # دریافت کد کشور و تبدیل به حروف بزرگ برای تطبیق دقیق
-                    job_country = (job.get("job_country") or "").upper()
-                    
-                    # اگر کشور در لیست اروپا نبود، نادیده بگیر (continue کن)
-                    if job_country not in EUROPEAN_COUNTRIES_CODES:
-                        # ما این‌ها را به عنوان "تکراری یا فیلتر شده" حساب نمی‌کنیم 
-                        # چون اصلاً در محدوده جغرافیایی ما نیستند
-                        continue 
-
+                   
                     seen_jobs.add(job_id)   # همیشه ثبت میکنیم، حتی blacklisted ها
 
                     if is_blacklisted(job):
