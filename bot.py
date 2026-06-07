@@ -106,7 +106,7 @@ def save_seen_jobs(seen: set) -> None:
 # JSearch API
 # ══════════════════════════════════════════════════════════════════════════════
 
-def search_jobs(query: str, retries: int = 3) -> list:
+def search_jobs(query: str, country:str, retries: int = 3) -> list:
     """جستجو با retry خودکار و مدیریت rate limit"""
     url = "https://jsearch.p.rapidapi.com/search"
     headers = {
@@ -118,6 +118,7 @@ def search_jobs(query: str, retries: int = 3) -> list:
         "num_pages":      "1",
         "date_posted":    "3days",
         "work_from_home": "true",
+        "country":     country,
     }
 
     for attempt in range(1, retries + 1):
@@ -328,11 +329,11 @@ def main():
     blacklisted   = 0
     already_seen  = 0
     errors        = 0
-
+    for country in EUROPEAN_COUNTRIES_CODES:
     for query in SEARCH_QUERIES:
         log.info(f"Searching: '{query}'")
         try:
-            jobs = search_jobs(query)
+            jobs = search_jobs(query, country)
             log.info(f"  → {len(jobs)} raw results")
 
             for job in jobs:
