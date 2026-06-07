@@ -37,11 +37,26 @@ MAX_JOBS_PER_RUN  = 15     # حداکثر آگهی ارسالی در هر اجر
 
 # ─── کلمات جستجو ──────────────────────────────────────────────────────────────
 SEARCH_QUERIES = [
-    "Junior SEO remote",
-    "Technical SEO remote",
-    "SEO Content Editor remote",
-    "SEO Python remote",
-    "WordPress SEO Specialist remote",
+    "QA Automation Engineer",
+    "SDET",
+"QA Engineer",
+"Software Tester in Test",
+"Quality Assurance Analyst",
+"Automation Test Engineer",
+"QA Lead",
+"Test Lead",
+"Senior QA Engineer",
+"QA Architect",
+"QA Manager",
+"Principal QA Engineer",
+"Backend QA Engineer",
+"API Test Engineer",
+"FinTech QA Specialist",
+"Performance Test Engineer",
+"ETL Tester",
+"Quality Engineer",
+"Release Engineer",
+"UAT Lead",
 ]
 
 # ─── کلمات ممنوعه (Blacklist) ──────────────────────────────────────────────────
@@ -49,12 +64,14 @@ BLACKLIST_KEYWORDS = [
     "us residents only",
     "must reside in us",
     "must be located in the us",
-    "must be based in",
-    "senior",
-    "director",
-    "agency",
-    "full stack",
-    "fullstack",
+    "must be based in",    
+    "uk only",
+"europe only", 
+"australia only",
+"unpaid",
+"internship",
+"volunteer",
+"commission only",
 ]
 
 # ══════════════════════════════════════════════════════════════════════════════
